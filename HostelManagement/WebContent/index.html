@@ -1,17 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="index_css.css"></link>
 <meta charset="ISO-8859-1">
 <title>Hostel Management</title>
 </head>
 <body>
-<h1>Welcome to Hostel Management</h1>
+	<h1 id="title">Welcome to Hostel Management</h1>
 
-<div id="home">
-<div><a href="adminlogin.html">Admin Login</a></div>
 
-<div><a href="Student.html">Student Login</a></div>
-</div>
+	<div id="rector">
+	<div>
+			<p id="link_login" >Rector Login</p>
+		</div>
+		<form id="form_rec" action="" method="">
+			<table>
+				<tr>
+					<td><input type="text" name="rector_un" placeholder="Email ID" /></td>
+				</tr>
+				<tr>
+					<td><input  type="password" name="rector_pw" placeholder="Password" /></td>
+				</tr>
+				<tr><td><p>Validation Here</p></td></tr>
+				<tr>
+					<td><input id="login_rec" type="submit" name="student_submit" value="Login" /></td>
+				</tr>
+			</table>
+
+
+		</form>
+
+		<div>
+			<a id="link" href="rector.html">Rector Registration</a>
+		</div>
+
+	</div>
+
+	<div id="student">
+	<div>
+			<p id="link_login" >Student Login</p>
+		</div>
+		<form id="form_stu" action="" method="">
+			<table>
+				<tr>
+					<td><input type="text" name="student_un" placeholder="Email ID" /></td>
+				</tr>
+				<tr>
+					<td><input type="password" name="student_pw" placeholder="Password" /></td>
+				</tr>
+				<tr><td><p>Validation Here</p></td></tr>
+				<tr>
+					<td><input id="login_stu" type="submit" name="student_submit" value="Login" /></td>
+				</tr>
+			</table>
+		</form>
+		
+		<div>
+			<a id="link" href="Student.html">Student Registration</a>
+		</div>
+	</div>
 
 </body>
 </html>

@@ -1,0 +1,131 @@
+@CHARSET "ISO-8859-1";
+
+#title{
+	height:42px;
+	width:90%;
+	margin-left:5%;
+	margin-right:5%;
+	border:2px solid red;
+	text-align: center;
+	
+}
+
+#link{
+	text-decoration:none;
+	font-size:18px;
+	color:white;
+	
+}
+
+#link_login{
+	text-decoration:none;
+	font-size:25px;
+	color:white;
+	
+}
+
+/*-----------Student Division------------*/
+
+#rector{
+	text-align:center;
+	height:350px;
+	width:400px;
+	margin-left:15px;
+	border:2px solid silver;
+	background-image:url("image/index_hostel.jpg");
+	float:left;
+}
+
+#form_rec{
+	height:200px;
+	width: 300px;
+	border:2px solid white;
+	margin-left:48px;
+	background-color:#232323;
+	border-radius:5px;
+	opacity: 80; 
+	margin-top: 30px;
+}
+
+#form_rec table{
+	margin-left: 55px;
+	margin-top: 50px;
+}
+
+#login_rec{
+	height:25px;
+	width: 70px;
+	border: 1px solid white;
+	border-radius:5px;
+	color:white;
+	background-color: #0080c0;
+}
+
+/* #rector :hover{
+	text-align:center;
+	height:500px;
+	width:400px;
+	margin-left:415px;
+	border:2px solid white;
+	float: left;
+	background-color: #232323;
+} */
+
+/*-----------Student Division------------*/
+#student{
+	text-align:center;
+	height:350px;
+	width:400px;
+	margin-left:415px;
+	border:2px solid silver;
+	float: left;
+	background-image:url("image/index_student.jpg");
+}
+
+#form_stu{
+	height:200px;
+	width: 300px;
+	border:2px solid white;
+	border-radius:5px;
+	margin-left:48px;
+	background-color:#232323;
+	opacity: 80; 
+	margin-top: 30px;
+}
+
+#login_stu{
+	height:25px;
+	width: 70px;
+	border: 1px solid white;
+	border-radius:7px;
+	color:white;
+	background-color: #008c46;
+}
+
+#form_stu table{
+	margin-left: 55px;
+	margin-top: 50px;
+}
+
+/* #student :hover{
+	text-align:center;
+	height:500px;
+	width:400px;
+	margin-left:415px;
+	border:2px solid white;
+	float: left;
+	background-color: #232323;
+}
+
+ */
+
+
+
+
+
+
+
+
+
+
+
