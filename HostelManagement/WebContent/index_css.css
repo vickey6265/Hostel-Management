@@ -366,8 +366,7 @@
 /*-------------- About us ----------------*/
 
 /*-------------- Contact us ----------------*/
-
-#rector_cus{
+#rector_cus {
 	text-align: center;
 	height: 350px;
 	width: 100%;
@@ -388,34 +387,41 @@
 		rgba(0, 0, 0, 0.19);
 }
 
+#form_cus table{
+	margin-left : 50px;
+}
+
 #form_cus input {
-	margin-left: 60px;
-	font-family: sans-serif;
+	margin-left: 10px;
+	 font-family : sans-serif;
 	border-radius: 5px;
 	height: 30px;
 	width: 250px;
 	margin-top: 10px;
 }
 
-#email_rec_icon_cus {
-	margin-left: 60px;
+#cus_icon {
 	height: 25px;
+	margin-left: 60px;
+
 	width: 25px;
 	padding-right: 20px;
-	margin-top: 5px;
+	padding-top: 10px;
+}
+
+#login_rec_cus {
+	height: 30px;
+	width: 200px;
+	margin-left : 30%;
+	margin-top : 20px;
+	border: 1px ridge white;
+	border-radius: 5px;
+	color: white;
+	background-color: #0080c0;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
 		rgba(0, 0, 0, 0.19);
 }
 
-#password_rec_icon_cus {
-	height: 25px;
-	margin-left: 60px;
-	width: 25px;
-	padding-right: 20px;
-	margin-top: 5px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
-		rgba(0, 0, 0, 0.19);
-}
 /*-------------- copyright ----------------*/
 
 /*-------------- Footer Part index ------------*/
