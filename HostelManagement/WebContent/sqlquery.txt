@@ -1,0 +1,5 @@
+
+Rector table:-
+create table rector(rid number(5) not null,name varchar2(50) not null,dob date,collage varchar2(50),address varchar2(150),phoneno number(10) not null,email varchar2(50) not null,password varchar2(50),dojoin date,dol date,photo varchar2(50));
+
+Student table:-
