@@ -44,25 +44,25 @@ public class RectorData {
 		return null;
 	}
 	
-	public static int saveRector(int rid, String name, Date dob, String collage, String address, long phoneNo, String email,
-			String password, Date dateOfJoin, Date dateOfLeave,String photo) {
+	public static int saveRector(int rid, String name, Date dob, String address, long phoneNo, String email,
+			String password, Date dateOfJoin, String photo) {
 		int status=0;
 		
-		String sqlqry="insert into rector() values(?,?,?,?,?,?,?,?,?,?,?)";
+		String sqlqry="insert into rector(rid,name,dob,collage,address,phoneno,email,password,dojoin,dol,photo) values(?,?,?,?,?,?,?,?,?,?,?)";
 		try {
 			Connection con=Connector.getConnection();
 			
 			PreparedStatement ps=con.prepareStatement(sqlqry);
 			ps.setInt(1, rid);
 			ps.setString(2, name);
-			ps.setDate(4, dob);
-			ps.setString(5, collage);
-			ps.setString(6, address);
-			ps.setLong(7, phoneNo);
-			ps.setString(8, email);
-			ps.setString(9, password);
-			ps.setDate(10, dateOfJoin);
-			ps.setDate(10, dateOfLeave);
+			ps.setDate(3, dob);
+			ps.setString(4, "");
+			ps.setString(5, address);
+			ps.setLong(6, phoneNo);
+			ps.setString(7, email);
+			ps.setString(8, password);
+			ps.setDate(9, dateOfJoin);
+			
 			ps.setString(11, photo);
 			
 			
