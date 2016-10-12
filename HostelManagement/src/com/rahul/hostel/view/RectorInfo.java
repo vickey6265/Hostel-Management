@@ -1,0 +1,55 @@
+package com.rahul.hostel.view;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.rahul.hostel.db.Rector;
+import com.rahul.hostel.db.Student;
+
+@WebServlet("/rector_info")
+public class RectorInfo extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Rector ri = new Rector();
+		Student si = new Student();
+		response.setContentType("text/html");
+		PrintWriter pw = response.getWriter();
+/*Student Details Division*/
+		request.getRequestDispatcher("hostel_header.html").include(request, response);
+		pw.print("<div id=\"rector_info\">");
+		pw.print("<label>"+ri.getName()+"</label><br/>");
+		pw.print("<label>"+ri.getAddress()+"</label><br/>");
+		pw.print("<label>"+ri.getEmail()+"</label><br/>");
+		pw.print("<label>"+ri.getDob()+"</label><br/>");
+		pw.print("<label>"+ri.getPhoneno()+"</label><br/>");
+		
+		pw.print("</div>");
+		
+/*Student Details Division*/
+		pw.print("<div id=\"student_info\">");
+		pw.print("<label>"+si.getPhoto()+"</label><br/>");
+		pw.print("<label>"+si.getName()+"</label><br/>");
+		pw.print("<label>"+si.getAge()+"</label><br/>");
+		pw.print("<label>"+si.getEmail()+"</label><br/>");
+		pw.print("<label>"+si.getAddress()+"</label><br/>");
+		pw.print("<label>"+si.getDob()+"</label><br/>");
+		pw.print("<label>"+si.getPhoneNo()+"</label><br/>");
+		pw.print("<label>"+si.getDateOfJoin()+"</label><br/>");
+		pw.print("<label>"+si.getFees()+"</label><br/>");
+		pw.print("<label>"+si.getRoomNo()+"</label><br/>");
+		pw.print("<label>"+si.getFees()+"</label><br/>");
+		pw.print("<label>"+si.getDateOfLeave()+"</label><br/>");
+		
+		pw.print("</div>");
+		
+		request.getRequestDispatcher("hostel_footer.html").include(request, response);
+	}
+
+}
