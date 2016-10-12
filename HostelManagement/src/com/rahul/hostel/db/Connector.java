@@ -14,17 +14,17 @@ public class Connector {
 	private static Connection con;
 	public static Connection getConnection() throws FileNotFoundException, IOException, ClassNotFoundException, SQLException {
 		
-		Properties prop=new Properties();
-		prop.load(new FileInputStream(new File("application.properties")));
+		/*Properties prop=new Properties();
+		prop.load(new FileInputStream(new File("hostel.properties")));
 		
 		String url=prop.getProperty("url");
 		String userName=prop.getProperty("username");
-		String password=prop.getProperty("password");
+		String password=prop.getProperty("password");*/
 		
 		Class.forName("oracle.jdbc.OracleDriver");
 		
 		if (con==null) {
-			con = DriverManager.getConnection(url, userName, password);
+			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521", "hostel_user", "system");
 			return con;
 		}
 		else {

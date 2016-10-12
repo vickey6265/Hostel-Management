@@ -1,11 +1,6 @@
 package com.rahul.hostel.main;
 
 import java.io.IOException;
-import java.sql.Date;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,25 +20,18 @@ public class AddRector extends HttpServlet {
 		System.out.println("start");
 		String name=request.getParameter("rector_name");
 		String dob=(request.getParameter("rector_dob"));
-		SimpleDateFormat format=new SimpleDateFormat("dd/mm/yyyy");
-		java.sql.Date utilDate = null;
-		try {
-			utilDate = (Date) format.parse(dob);
-			System.out.println(utilDate);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		String address=request.getParameter("rector_add");
 		long mobile=Long.parseLong(request.getParameter("rector_numb"));
 		String email=request.getParameter("rector_email");
 		String password=request.getParameter("rector_pass");
 		
 		String photo=request.getParameter("rector_photo");
-		Date dateOfJoin=(Date) Calendar.getInstance().getTime();
+		String dateOfJoin=request.getParameter("doj");
 		rid++;
+		System.out.println(name+" "+dob+" "+address+" "+mobile+" "+email+" "+password+" "+photo+" "+dateOfJoin);
 	
-		int i=RectorData.saveRector(rid, name, (Date) utilDate, address,  mobile, email, password, dateOfJoin, photo);
+		int i=RectorData.saveRector(rid, name, dob, address,  mobile, email, password, dateOfJoin, photo);
 	
 		if(i>0) {
 			System.out.println("done");
