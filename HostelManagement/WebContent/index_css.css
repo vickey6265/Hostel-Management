@@ -38,7 +38,8 @@
 }
 
 #title p {
-	padding-top: 10px; font-family : sans-serif;
+	padding-top: 10px;
+	font-family: sans-serif;
 	font-size: 20px;
 	text-align: center;
 	font-family: sans-serif;
@@ -211,7 +212,7 @@
 #hostel_image {
 	float: left;
 	padding-top: 10px;
-	height: 700px;
+	height: 600px;
 	width: 100%;
 	background-image: linear-gradient(to left, #008c46, #0080c0);
 }
@@ -230,14 +231,19 @@
 	margin-left: 60px;
 	height: 250px;
 	width: 250px;
+	border-radius: 5px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
 		rgba(0, 0, 0, 0.30);
 }
 
-}
 #hostel_image img:hover {
-	border-radius: 15px;
-	border-radius: 5px;
+	height: 240px;
+	width: 240px;
+	-webkit-filter: grayscale(60%);
+	-webkit-transform: scale(1.0);
+	transform: scale(1.1);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0
+		rgba(0, 0, 0, 0.70);
 }
 
 /*---------- Rules And Regulation -----------*/
@@ -249,7 +255,7 @@
 }
 
 #rr_details {
-	font-family: 'Ubuntu', sans-serif;
+	font-family:sans-serif;
 	position: relative;
 	float: left;
 	width: 100%;
@@ -267,8 +273,16 @@
 	padding-bottom: 10px;
 }
 
+
+/* #rr_rules :hover{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-size: 16px;
+	background-image: linear-gradient(to left, #008c46, #0080c0);
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+} */
 #rr_rules p {
-	margin-top: 3px;
+	margin-top: 5px;
 }
 /*-----------Rector Registration-----------*/
 #rec_title_regi {
@@ -423,10 +437,6 @@
 		rgba(0, 0, 0, 0.30);
 }
 
-#reset_pw_link {
-	
-}
-
 #form_rp table {
 	margin-left: 50px;
 }
@@ -461,7 +471,7 @@
 		rgba(0, 0, 0, 0.30);
 }
 
-/*--------------  us ----------------*/
+/*-------------- About us ----------------*/
 #about_us {
 	height: 600px;
 	width: 100%;
@@ -500,7 +510,7 @@
 	font-size: 25px;
 	color: white;
 	text-align: center;
-	background-image: linear-gradient(to left, #0080c0, #008c46); 
+	background-image: linear-gradient(to left, #0080c0, #008c46);
 }
 
 /*-------------- Contact us ----------------*/
@@ -511,7 +521,8 @@
 	background-image: linear-gradient(to left, #0080c0, #008c46);
 	float: left;
 }
-#link_login_cu{
+
+#link_login_cu {
 	margin-left: 41.5%;
 	border-radius: 5px;
 	padding-top: 10px;
@@ -525,6 +536,7 @@
 	font-size: 25px;
 	color: white;
 }
+
 #form_cus {
 	padding-top: 20px;
 	height: 200px;
