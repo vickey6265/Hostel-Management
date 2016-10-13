@@ -43,14 +43,20 @@
 }
 
 #link {
-	margin-top: 30px;
 	font-family: sans-serif;
-	text-decoration: none;
+	text-decoration: underline;
 	font-size: 18px;
 	color: white;
 }
+#link :hover {
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 20px;
+	color: yellow;
+}
 
 #link_login {
+	
 	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 25px;
@@ -81,6 +87,7 @@
 }
 
 #form_rec {
+	margin-bottom: 10px;
 	padding-top: 20px;
 	height: 200px;
 	width: 300px;
@@ -136,6 +143,7 @@
 }
 
 #form_stu {
+	margin-bottom: 10px;
 	border-radius: 5px;
 	padding-top: 20px;
 	margin-left: 28%;

@@ -1,5 +1,21 @@
 
-Rector table:-
-create table rector(rid number(5) not null,name varchar2(50) not null,dob date,collage varchar2(50),address varchar2(150),phoneno number(10) not null,email varchar2(50) not null,password varchar2(50),dojoin date,dol date,photo varchar2(50));
+/***************** Rector table ********************/
 
-Student table:-
+create table rector(rid number(5) not null, name varchar2(50) not null, dob date, collage varchar2(50),
+address varchar2(150), phoneno number(10) not null, email varchar2(50) not null, password varchar2(50),
+dojoin date, dol date, photo varchar2(50));
+
+/***************** Student_lite table ******************/
+
+create table student_lite (sid number(5), name varchar2(50), 
+age number(2), dob date, doj date, address varchar2(150), 
+college varchar2(100), mobile_num number(10), email varchar2(50),
+password varchar2(25), photo blob);
+
+
+/***************** Student Table *******************/
+
+create table student_info (sid number(5), name varchar2(50), 
+age number(2), dob date, doj date, address varchar2(150), 
+college varchar2(100), mobile_num number(10), email varchar2(50),
+password varchar2(25), photo blob, dol date, rid number(5), roomno number(5), fees number(7,2), access varchar2(1));
