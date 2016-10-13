@@ -18,27 +18,19 @@ public class Test {
 
 		System.out.println(stu);
 
-		Connection con = null;
+		
 		try {
-			con = Connector.getConnection();
+			Connection con = Connector.getConnection();
 
 			Statement smt = con.createStatement();
 			ResultSet rs = smt.executeQuery("select MAX(sid) sid from student_lite");
-			
+			while(rs.next()) {
 			int sid=rs.getInt("sid");
 			System.out.println(sid);
-
+			}
 		} catch (ClassNotFoundException | IOException | SQLException e) {
 			e.printStackTrace();
-		} /*finally {
-			if (con != null) {
-				try {
-					//con.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
-		}*/
+		} 
 	}
 
 }
