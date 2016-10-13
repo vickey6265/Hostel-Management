@@ -10,7 +10,7 @@
 	margin-top: -20px;
 	color: white;
 	font-size: 40px;
-	text-align: center;
+	margin-left: 500px;
 }
 
 #logo_1 {
@@ -38,9 +38,10 @@
 }
 
 #title p {
-	font-family: sans-serif;
+	padding-top: 10px; font-family : sans-serif;
 	font-size: 20px;
 	text-align: center;
+	font-family: sans-serif;
 }
 
 #link {
@@ -60,6 +61,14 @@
 }
 
 #link_login {
+	margin-left: 240px;
+	border-radius: 5px;
+	padding-top: 10px;
+	height: 40px;
+	width: 200px;
+	text-align: center;
+	background-color: #414141;
+	margin-top: 10px;
 	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 25px;
@@ -91,14 +100,13 @@
 
 #form_rec {
 	margin-bottom: 10px;
-	padding-top: 20px;
+	padding-top: 5px;
 	height: 200px;
 	width: 300px;
 	margin-left: 28%;
 	background-color: #414141;
 	border-radius: 5px;
-	opacity: 80;
-	margin-top: 30px;
+	margin-top: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
 		rgba(0, 0, 0, 0.30);
 }
@@ -148,13 +156,13 @@
 #form_stu {
 	margin-bottom: 10px;
 	border-radius: 5px;
-	padding-top: 20px;
+	padding-top: 5px;
 	margin-left: 28%;
 	height: 200px;
 	width: 300px;
 	background-color: #414141;
 	opacity: 80;
-	margin-top: 30px;
+	margin-top: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
 		rgba(0, 0, 0, 0.30);
 }
@@ -298,7 +306,8 @@
 	height: 450px;
 	width: 100%;
 	padding-top: 20px;
-	padding-bottom: 10px; background-color : #0078b3;
+	padding-bottom: 10px;
+	background-color: #0078b3;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
 		rgba(0, 0, 0, 0.30);
 	background-color: #0078b3;
@@ -312,8 +321,9 @@
 }
 
 #form_rec_registration table {
-	margin-top: 15px; box-shadow : 0 4px 8px 0 rgba( 0, 0, 0, 0.6), 0 6px
-	20px 0 rgba( 0, 0, 0, 0.30);
+	margin-top: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
+		rgba(0, 0, 0, 0.30);
 	border-radius: 5px;
 	margin-left: 40%;
 	padding-bottom: 10px;
@@ -351,11 +361,12 @@
 	height: 550px;
 	padding-top: 10px;
 	padding-left: 20px;
-	background-color: #008c46;
+	/*background-color: #008c46;*/
+	background-image: linear-gradient(to left, #008c46, #0080c0);
 }
 
 #form_stu_registration table {
-	margin-top:15px;
+	margin-top: 15px;
 	width: 500px;
 	padding-left: -10px;
 	padding-right: 170px;
@@ -364,6 +375,7 @@
 	padding-bottom: 10px;
 	margin-left: 32%;
 	border-radius: 5px;
+	background-color: #008c46;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
 		rgba(0, 0, 0, 0.30);
 }
@@ -373,14 +385,13 @@
 	width: 250px;
 	height: 28px;
 	border-radius: 5px;
-	box-shadow: 2px 2px 2px #008c46;
+	box-shadow: 2px 2px 2px black;
 }
 
 #title_stu {
 	background-color: #232323;
 	height: 100px;
 }
-
 
 /*-------------- Forget Password ----------------*/
 #reset_pw {
@@ -430,11 +441,11 @@
 }
 
 #cus_icon {
-	height: 25px;
+	height: 30px;
 	margin-left: 60px;
-	width: 25px;
+	width: 30px;
 	padding-right: 20px;
-	padding-top: 10px;
+	padding-top: 20px;
 }
 
 #login_rec_cus {
@@ -450,7 +461,7 @@
 		rgba(0, 0, 0, 0.30);
 }
 
-/*-------------- About us ----------------*/
+/*--------------  us ----------------*/
 #about_us {
 	height: 600px;
 	width: 100%;
@@ -489,7 +500,7 @@
 	font-size: 25px;
 	color: white;
 	text-align: center;
-	background-image: linear-gradient(to left, #0080c0, #008c46);
+	background-image: linear-gradient(to left, #0080c0, #008c46); 
 }
 
 /*-------------- Contact us ----------------*/
@@ -500,7 +511,20 @@
 	background-image: linear-gradient(to left, #0080c0, #008c46);
 	float: left;
 }
-
+#link_login_cu{
+	margin-left: 41.5%;
+	border-radius: 5px;
+	padding-top: 10px;
+	height: 40px;
+	width: 200px;
+	text-align: center;
+	background-color: #414141;
+	margin-top: 10px;
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+}
 #form_cus {
 	padding-top: 20px;
 	height: 200px;
@@ -528,9 +552,9 @@
 }
 
 #cus_icon {
-	height: 25px;
+	height: 27px;
 	margin-left: 60px;
-	width: 25px;
+	width: 27px;
 	padding-right: 20px;
 	padding-top: 10px;
 }
