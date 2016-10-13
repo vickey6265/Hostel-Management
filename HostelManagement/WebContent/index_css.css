@@ -19,7 +19,7 @@
 	margin-left: 10px;
 	margin-top: 15px;
 	font-family: sans-serif;
-	font-size : 50px;
+	font-size: 50px;
 	color: #00ae57;
 	font-size: 50px;
 }
@@ -51,18 +51,11 @@
 }
 
 #link_fp {
-	margin-top:10px;
+	margin-top: 10px;
 	margin-left: 15px;
 	font-family: sans-serif;
 	text-decoration: underline;
 	font-size: 14px;
-	color: yellow;
-}
-
-#link :hover {
-	font-family: sans-serif;
-	text-decoration: none;
-	font-size: 20px;
 	color: yellow;
 }
 
@@ -206,114 +199,6 @@
 	margin-left: 20px;
 	margin-top: 15px;
 }
-
-/*-----------Rector Registration-----------*/
-#rec_title_regi {
-	font-family: sans-serif;
-	font-size: 30px;
-	color: white;
-}
-
-#rec_icon {
-	height: 20px;
-	width: 20px;
-	margin-right: 10px;
-}
-
-#title_rec {
-	background-color: black;
-	height: 100px;
-	wdth: 100%;
-}
-
-#register_rec {
-	height: 25px;
-	width: 100px;
-	border: 1px solid white;
-	border-radius: 5px;
-	color: white;
-	background-color: #008c46;
-	margin-left: 55px;
-	margin-top: 10px;
-}
-
-#form_rec_registration {
-	text-align: center;
-	height: 463px; width100 %x;
-	padding-top: 10px;
-	padding-left: 20px;
-	background-color: #0078b3;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
-}
-
-#form_rec_registration input {
-	margin-top: 2px;
-	width: 230px;
-	height: 28px;
-	border-radius: 5px;
-}
-
-#form_rec_registration table {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
-	border-radius: 5px;
-	margin-left: 40%;
-}
-
-/*-----------Student Registration-----------*/
-#stu_title_regi {
-	font-family: sans-serif;
-	font-size: 30px;
-	color: white;
-}
-
-#stu_icon {
-	height: 20px;
-	width: 20px;
-	margin-right: 10px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
-}
-
-#register_stu {
-	border: 1px solid white;
-	border-radius: 4px;
-	color: white;
-	background-color: #0080c0;
-	margin-left: 55px;
-	margin-top: 10px;
-}
-
-#form_stu_registration {
-	text-align: center;
-	height: 480px;
-	width: 100%;
-	padding-top: 10px;
-	padding-left: 20px;
-	background-color: #008c46;
-}
-
-#form_stu_registration table {
-	margin-left: 40%;
-	border-radius: 5px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
-}
-
-#form_stu_registration input {
-	margin-top: 2px;
-	width: 230px;
-	height: 28px;
-	border-radius: 5px;
-	box-shadow: 2px 2px 2px #008c46;
-}
-
-#title_stu {
-	background-color: #232323;
-	height: 100px;
-}
-
 /*---------- Hostel Images -----------*/
 #hostel_image {
 	float: left;
@@ -377,6 +262,126 @@
 #rr_rules p {
 	margin-top: 3px;
 }
+/*-----------Rector Registration-----------*/
+#rec_title_regi {
+	font-family: sans-serif;
+	font-size: 30px;
+	color: white;
+}
+
+#rec_icon {
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
+}
+
+#title_rec {
+	background-color: black;
+	height: 100px;
+	wdth: 100%;
+}
+
+#register_rec {
+	height: 25px;
+	width: 100px;
+	border: 1px solid white;
+	border-radius: 5px;
+	color: white;
+	background-color: #008c46;
+	margin-left: 55px;
+	margin-right: 18px;
+	margin-top: 10px;
+}
+
+#form_rec_registration {
+	text-align: center;
+	height: 450px;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 10px; background-color : #0078b3;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
+		rgba(0, 0, 0, 0.30);
+	background-color: #0078b3;
+}
+
+#form_rec_registration input {
+	margin-top: 2px;
+	width: 230px;
+	height: 28px;
+	border-radius: 5px;
+}
+
+#form_rec_registration table {
+	margin-top: 15px; box-shadow : 0 4px 8px 0 rgba( 0, 0, 0, 0.6), 0 6px
+	20px 0 rgba( 0, 0, 0, 0.30);
+	border-radius: 5px;
+	margin-left: 40%;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
+		rgba(0, 0, 0, 0.30);
+}
+
+/*-----------Student Registration-----------*/
+#stu_title_regi {
+	font-family: sans-serif;
+	font-size: 30px;
+	color: white;
+}
+
+#stu_icon {
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
+}
+
+#register_stu {
+	border: 1px solid white;
+	border-radius: 4px;
+	color: white;
+	background-color: #0080c0;
+	margin-left: 55px;
+	margin-right: 18px;
+}
+
+#form_stu_registration {
+	text-align: center;
+	height: 550px;
+	padding-top: 10px;
+	padding-left: 20px;
+	background-color: #008c46;
+}
+
+#form_stu_registration table {
+	margin-top:15px;
+	width: 500px;
+	padding-left: -10px;
+	padding-right: 170px;
+	height: 480px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: 32%;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
+		rgba(0, 0, 0, 0.30);
+}
+
+#form_stu_registration input {
+	margin-top: 2px;
+	width: 250px;
+	height: 28px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #008c46;
+}
+
+#title_stu {
+	background-color: #232323;
+	height: 100px;
+}
+
+
 /*-------------- Forget Password ----------------*/
 #reset_pw {
 	text-align: center;
@@ -385,13 +390,15 @@
 	background-image: linear-gradient(to left, #0080c0, #008c46);
 	float: left;
 }
-#reset_pw p{
+
+#reset_pw p {
 	padding-top: 10px;
 	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 25px;
 	color: white;
 }
+
 #form_rp {
 	padding-top: 20px;
 	height: 250px;
