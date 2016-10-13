@@ -12,7 +12,7 @@ import java.util.List;
 
 public class StudentData {
 
-	public static List<Student> getAllRector() {
+	public static List<Student> getAllStudent() {
 		List<Student> studentList = new LinkedList<Student>();
 
 		Connection con = null;
@@ -24,13 +24,81 @@ public class StudentData {
 
 			while (rs.next()) {
 				Student emp = new Student(rs.getInt("sid"), rs.getString("name"), rs.getString("dob"), rs.getInt("age"),
-						rs.getString("collage"), rs.getString("address"), rs.getLong("phoneno"), rs.getString("email"),
+						rs.getString("college"), rs.getString("address"), rs.getLong("mobile_num"), rs.getString("email"),
 						rs.getString("password"), rs.getString("doj"), rs.getString("dol"), rs.getInt("rid"),
-						rs.getInt("roomno"), rs.getDouble("fees"), rs.getString("photo"), rs.getBoolean("access"));
+						rs.getInt("roomno"), rs.getDouble("fees"), rs.getString("photo"), rs.getBoolean("stu_access"));
 
 				studentList.add(emp);
 			}
 			return studentList;
+		} catch (ClassNotFoundException | IOException | SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (con != null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return null;
+	}
+	
+	public static Student getStudent_lite(int sid) {
+		Student student = new Student();
+
+		Connection con = null;
+		try {
+			con = Connector.getConnection();
+
+			Statement smt = con.createStatement();
+			ResultSet rs = smt.executeQuery("select * from student_lite where sid="+sid);
+
+			while (rs.next()) {	
+				boolean stu_access;
+				if(rs.getString("stu_access").equals("n")) {
+					stu_access=false;
+				}else
+					stu_access=true;
+				student = new Student(rs.getInt("sid"), rs.getString("name"), rs.getString("dob"), rs.getInt("age"),
+						rs.getString("college"), rs.getString("address"), rs.getLong("mobile_num"), rs.getString("email"),
+						rs.getString("password"), rs.getString("doj"),  stu_access, rs.getString("photo"));
+
+			}
+			return student;
+		} catch (ClassNotFoundException | IOException | SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (con != null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return null;
+	}
+	
+	public static Student getStudent(int sid) {
+		Student student = new Student();
+
+		Connection con = null;
+		try {
+			con = Connector.getConnection();
+
+			Statement smt = con.createStatement();
+			ResultSet rs = smt.executeQuery("select * from student_lite where sid="+sid);
+
+			while (rs.next()) {	
+				student = new Student(rs.getInt("sid"), rs.getString("name"), rs.getString("dob"), rs.getInt("age"),
+						rs.getString("college"), rs.getString("address"), rs.getLong("mobile_num"), rs.getString("email"),
+						rs.getString("password"), rs.getString("doj"), rs.getString("dol"), rs.getInt("rid"),
+						rs.getInt("roomno"), rs.getDouble("fees"), rs.getString("photo"), rs.getBoolean("stu_access"));
+
+			}
+			return student;
 		} catch (ClassNotFoundException | IOException | SQLException e) {
 			e.printStackTrace();
 		} finally {

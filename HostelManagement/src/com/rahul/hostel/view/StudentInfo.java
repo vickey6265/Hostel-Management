@@ -13,7 +13,7 @@ import com.rahul.hostel.db.Student;
 
 
 @WebServlet("/info_student")
-public class Student_Info extends HttpServlet {
+public class StudentInfo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

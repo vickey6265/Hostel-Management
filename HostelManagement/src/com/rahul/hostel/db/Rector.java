@@ -17,6 +17,10 @@ public class Rector {
 	public Rector() {
 		
 	}
+	
+	public Rector(int rid) {
+		
+	}
 
 	public Rector(int rid, String name, String dob, String collage, String address, long phoneno, String email,
 			String password, String dateOfJoin, String dateOfLeave,String photo) {

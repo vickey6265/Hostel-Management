@@ -1,4 +1,4 @@
-package com.rahul.hostel.main;
+package com.rahul.hostel.controller;
 
 import java.io.IOException;
 import java.sql.Date;

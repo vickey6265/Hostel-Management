@@ -22,6 +22,10 @@ public class Student {
 	public Student() {
 
 	}
+	
+	public Student(int sid) {
+		this.sid = sid;
+	}
 
 	public Student(int sid, String name, String dob, int age, String collage, String address, long phoneNo,
 			String email, String password, String dateOfJoin, String dateOfLeave, int rid, int roomNo, double fees,
@@ -42,6 +46,25 @@ public class Student {
 		this.fees = fees;
 		this.photo = photo;
 		this.access = access;
+	}
+
+	
+	
+	public Student(int sid, String name, String dob, int age, String collage, String address, long phoneNo,
+			String email, String password, String dateOfJoin, boolean access, String photo) {
+		super();
+		this.sid = sid;
+		this.name = name;
+		this.dob = dob;
+		this.age = age;
+		this.collage = collage;
+		this.address = address;
+		this.phoneNo = phoneNo;
+		this.email = email;
+		this.password = password;
+		this.dateOfJoin = dateOfJoin;
+		this.access = access;
+		this.photo = photo;
 	}
 
 	public int getSid() {
@@ -172,4 +195,14 @@ public class Student {
 		this.photo = photo;
 	}
 
+	@Override
+	public String toString() {
+		return "Student [sid=" + sid + ", name=" + name + ", dob=" + dob + ", age=" + age + ", collage=" + collage
+				+ ", address=" + address + ", phoneNo=" + phoneNo + ", email=" + email + ", password=" + password
+				+ ", dateOfJoin=" + dateOfJoin + ", dateOfLeave=" + dateOfLeave + ", rid=" + rid + ", roomNo=" + roomNo
+				+ ", fees=" + fees + ", access=" + access + ", photo=" + photo + "]";
+	}
+
+	
+	
 }
