@@ -17,10 +17,11 @@
 	float: left;
 	text-align: left;
 	margin-left: 10px;
-	margin-top: 10px;
+	margin-top: 15px;
 	font-family: sans-serif;
-	font-size: 50px;
+	font-size : 50px;
 	color: #00ae57;
+	font-size: 50px;
 }
 
 #logo_2 {
@@ -48,6 +49,16 @@
 	font-size: 18px;
 	color: white;
 }
+
+#link_fp {
+	margin-top:10px;
+	margin-left: 15px;
+	font-family: sans-serif;
+	text-decoration: underline;
+	font-size: 14px;
+	color: yellow;
+}
+
 #link :hover {
 	font-family: sans-serif;
 	text-decoration: none;
@@ -56,7 +67,6 @@
 }
 
 #link_login {
-	
 	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 25px;
@@ -314,7 +324,6 @@
 }
 
 #hostel_image p {
-	
 	text-align: center;
 	font-family: sans-serif;
 	text-decoration: none;
@@ -324,7 +333,7 @@
 }
 
 #hostel_image img {
-	margin-top : 15px;
+	margin-top: 15px;
 	margin-left: 60px;
 	height: 250px;
 	width: 250px;
@@ -347,7 +356,7 @@
 }
 
 #rr_details {
-	font-family: sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	position: relative;
 	float: left;
 	width: 100%;
@@ -357,8 +366,8 @@
 
 #rr_rules {
 	font-family: sans-serif;
-	color: #cacaca;
-	margin-left: 15px;
+	color: #f0f0f0;
+	margin-left: 10px;
 	margin-top: 10px;
 	text-align: left;
 	font-size: 15.5px;
@@ -368,15 +377,82 @@
 #rr_rules p {
 	margin-top: 3px;
 }
+/*-------------- Forget Password ----------------*/
+#reset_pw {
+	text-align: center;
+	height: 350px;
+	width: 100%;
+	background-image: linear-gradient(to left, #0080c0, #008c46);
+	float: left;
+}
+#reset_pw p{
+	padding-top: 10px;
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+}
+#form_rp {
+	padding-top: 20px;
+	height: 250px;
+	width: 40%;
+	margin-left: 30%;
+	background-color: #414141;
+	border-radius: 5px;
+	opacity: 80;
+	margin-top: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
+		rgba(0, 0, 0, 0.30);
+}
+
+#reset_pw_link {
+	
+}
+
+#form_rp table {
+	margin-left: 50px;
+}
+
+#form_rp input {
+	margin-left: 10px;
+	font-family: sans-serif;
+	border-radius: 5px;
+	height: 30px;
+	width: 250px;
+	margin-top: 10px;
+}
+
+#cus_icon {
+	height: 25px;
+	margin-left: 60px;
+	width: 25px;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+
+#login_rec_cus {
+	height: 30px;
+	width: 200px;
+	margin-left: 30%;
+	margin-top: 20px;
+	border: 1px ridge white;
+	border-radius: 5px;
+	color: white;
+	background-color: #0080c0;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
+		rgba(0, 0, 0, 0.30);
+}
+
 /*-------------- About us ----------------*/
 #about_us {
 	height: 600px;
 	width: 100%;
 	background-image: linear-gradient(to left, #0080c0, #008c46);
 }
-#about_us_data{
-	opacity : 60;
-	border-radius : 5px;
+
+#about_us_data {
+	opacity: 60;
+	border-radius: 5px;
 	margin-top: -430px;
 	height: 400px;
 	width: 700px;
@@ -384,10 +460,11 @@
 	background-image: linear-gradient(to left, #0080c0, #008c46);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0
 		rgba(0, 0, 0, 0.30);
-		z-index: 1;
+	z-index: 1;
 }
+
 #about_us img {
-	margin-left : 30px;
+	margin-left: 30px;
 	height: 200px;
 	width: 300px;
 	border-radius: 80px;
@@ -597,8 +674,7 @@
 }
 
 /*------------- Rector Info -----------------*/
-
-#rector_info{
+#rector_info {
 	height: 300px;
 	width: : 100%;
 	background-image: linear-gradient(to left, #0080c0, #008c46);
@@ -606,19 +682,17 @@
 		rgba(0, 0, 0, 0.30);
 }
 
-#rector_info label{
+#rector_info label {
 	padding-top: 20px;
 	font-size: 17px;
 	padding-left: 30px;
 	text-decoration: none;
 	font-family: sans-serif;
 	color: white;
-	
 }
 
 /*------------- Student Info -----------------*/
-
-#student_info{
+#student_info {
 	height: 300px;
 	width: : 100%;
 	background-image: linear-gradient(to left, #0080c0, #008c46);
@@ -626,12 +700,29 @@
 		rgba(0, 0, 0, 0.30);
 }
 
-#student_info label{
+#student_info label {
 	padding-top: 40px;
-	padding-left:30px;
+	padding-left: 30px;
 	font-size: 17px;
 	text-decoration: none;
 	font-family: sans-serif;
 	color: white;
-	
+}
+
+/*-------------- Student Info Display--------------*/
+#student_info_student {
+	height: 300px;
+	width: : 100%;
+	background-image: linear-gradient(to left, #0080c0, #008c46);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
+		rgba(0, 0, 0, 0.30);
+}
+
+#student_info_student label {
+	padding-top: 40px;
+	padding-left: 30px;
+	font-size: 17px;
+	text-decoration: none;
+	font-family: sans-serif;
+	color: white;
 }
