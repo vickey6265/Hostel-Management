@@ -1,4 +1,4 @@
-package com.rahul.hostel.db;
+package com.rahulvivek.hostel.db;
 
 public class Student {
 

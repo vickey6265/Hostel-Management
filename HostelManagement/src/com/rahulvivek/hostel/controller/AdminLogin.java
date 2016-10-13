@@ -1,4 +1,4 @@
-package com.rahul.hostel.controller;
+package com.rahulvivek.hostel.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

@@ -1,4 +1,4 @@
-package com.rahul.hostel.controller;
+package com.rahulvivek.hostel.controller;
 
 import java.io.IOException;
 import java.sql.Date;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.rahul.hostel.db.StudentData;
+import com.rahulvivek.hostel.db.StudentData;
 
 
 

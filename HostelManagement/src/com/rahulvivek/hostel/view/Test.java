@@ -1,4 +1,4 @@
-package com.rahul.hostel.view;
+package com.rahulvivek.hostel.view;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -6,9 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.rahul.hostel.db.Connector;
-import com.rahul.hostel.db.Student;
-import com.rahul.hostel.db.StudentData;
+import com.rahulvivek.hostel.db.Connector;
+import com.rahulvivek.hostel.db.Student;
+import com.rahulvivek.hostel.db.StudentData;
 
 public class Test {
 

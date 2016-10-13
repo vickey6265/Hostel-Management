@@ -1,4 +1,4 @@
-package com.rahul.hostel.controller;
+package com.rahulvivek.hostel.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.rahul.hostel.db.RectorData;
+import com.rahulvivek.hostel.db.RectorData;
 
 
 @WebServlet("/add_rector")
