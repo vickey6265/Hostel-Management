@@ -82,13 +82,13 @@ public class StudentData {
 		return status;
 	}
 	
-	public static int saveStudent_lite(int sid,String name, int age, Date dob, String collage, String address, long phoneNo,
-			String email, String password, Date dateOfJoin, String photo) {
+	public static int saveStudent_lite(int sid,String name, int age, String dob, String collage, String address, long phoneNo,
+			String email, String password, String dateOfJoin, String photo) {
 	
 		int status=0;
 		
 		
-		String sqlqry="insert into student_lite() values(?,?,?,?,?,?,?,?,?,?,?)";
+		String sqlqry="insert into student_lite(sid,name,age,dob,doj,address,college,mobile_num,email,password,photo,stu_access) values(?,?,?,?,?,?,?,?,?,?,?,?)";
 		try {
 			Connection con=Connector.getConnection();
 			
@@ -96,15 +96,15 @@ public class StudentData {
 			ps.setInt(1, sid);
 			ps.setString(2, name);
 			ps.setInt(3, age);
-			ps.setDate(4, dob);
-			ps.setString(5, collage);
+			ps.setString(4, dob);
+			ps.setString(5, dateOfJoin);
 			ps.setString(6, address);
-			ps.setLong(7, phoneNo);
-			ps.setString(8, email);
-			ps.setString(9, password);
-			ps.setDate(10, dateOfJoin);
+			ps.setString(7, collage);
+			ps.setLong(8, phoneNo);
+			ps.setString(9, email);
+			ps.setString(10, password);
 			ps.setString(11, photo);
-			
+			ps.setString(12, "n");
 			
 			status=ps.executeUpdate();
 		} catch (ClassNotFoundException | IOException | SQLException e) {

@@ -10,7 +10,7 @@ dojoin date, dol date, photo varchar2(50));
 create table student_lite (sid number(5), name varchar2(50), 
 age number(2), dob date, doj date, address varchar2(150), 
 college varchar2(100), mobile_num number(10), email varchar2(50),
-password varchar2(25), photo blob);
+password varchar2(25), photo blob ,stu_access varchar2(1));
 
 
 /***************** Student Table *******************/
@@ -18,4 +18,4 @@ password varchar2(25), photo blob);
 create table student_info (sid number(5), name varchar2(50), 
 age number(2), dob date, doj date, address varchar2(150), 
 college varchar2(100), mobile_num number(10), email varchar2(50),
-password varchar2(25), photo blob, dol date, rid number(5), roomno number(5), fees number(7,2), access varchar2(1));
+password varchar2(25), photo blob, dol date, rid number(5), roomno number(5), fees number(7,2), stu_access varchar2(1));
