@@ -2,6 +2,8 @@
 <html>
 <head>
 <link rel="stylesheet" href="index_css.css"></link>
+<link rel="stylesheet" href="index_validation_css.css"></link>
+<script type="text/javascript" src="validation.js"></script>
 <meta charset="ISO-8859-1">
 <title>Hostel Management</title>
 </head>
@@ -20,19 +22,16 @@
 		<div>
 			<p id="link_login">Rector Login</p>
 		</div>
-		<form id="form_rec" action="rector_login" method="get">
+		<form id="form_rec" action="rector_login" method="get" onsubmit="return rectorLogin(this)">
 			<table>
 				<tr>
-					<td><img src="icons/icons/cu_email.png" id="email_rec_icon" /><input
+					<td><img src="icons/icons/cu_email.png" id="email_rec_icon" /><input id="rector_un"
 						type="text" name="rector_un" placeholder="Email ID" /></td>
 
 				</tr>
 				<tr>
-					<td><img src="icons/icons/rp_pw.png" id="password_rec_icon" /><input
+					<td><img src="icons/icons/rp_pw.png" id="password_rec_icon" /><input id="rector_pw"
 						type="password" name="rector_pw" placeholder="Password" /></td>
-				</tr>
-				<tr>
-					<td><p>Validation Here</p></td>
 				</tr>
 				<tr>
 					<td><input id="login_rec" type="submit" name="student_submit"
@@ -57,18 +56,15 @@
 		<div>
 			<p id="link_login">Student Login</p>
 		</div>
-		<form id="form_stu" action="student_login" method="get">
+		<form id="form_stu" action="student_login" method="get" onsubmit="return studentLogin(this)">
 			<table>
 				<tr>
-					<td><img src="icons/icons/cu_email.png" id="email_stu_icon" /><input
+					<td><img src="icons/icons/cu_email.png" id="email_stu_icon" /><input id="student_un"
 						type="text" name="student_un" placeholder="Email ID" /></td>
 				</tr>
 				<tr>
-					<td><img src="icons/icons/rp_pw.png" id="password_stu_icon" /><input
+					<td><img src="icons/icons/rp_pw.png" id="password_stu_icon" /><input id="student_pw"
 						type="password" name="student_pw" placeholder="Password" /></td>
-				</tr>
-				<tr>
-					<td><p>Validation Here</p></td>
 				</tr>
 				<tr>
 					<td><input id="login_stu" type="submit" name="student_submit"

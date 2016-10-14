@@ -21,7 +21,7 @@ public class RectorInfo extends HttpServlet {
 		Rector ri = RectorData.getRector(Integer.parseInt(request.getParameter("rid")));
 		
 		System.out.println(ri.toString());
-		//Student si = new Student(Integer.parseInt(request.getParameter("sid")));
+		Student si = new Student(Integer.parseInt(request.getParameter("sid")));
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
 		
@@ -43,7 +43,7 @@ public class RectorInfo extends HttpServlet {
 		pw.print("</div>");
 		
 /*------------------- Student Details Division ----------------------*/
-		/*pw.print("<div id=\"student_info\">");
+		pw.print("<div id=\"student_info\">");
 		pw.print("<label>"+si.getPhoto()+"</label><br/>");
 		pw.print("<label>"+si.getName()+"</label><br/>");
 		pw.print("<label>"+si.getAge()+"</label><br/>");
@@ -58,7 +58,7 @@ public class RectorInfo extends HttpServlet {
 		pw.print("<label>"+si.getDateOfLeave()+"</label><br/>");
 		
 		pw.print("</div>");
-		*/
+		
 /*----------------------Footer Here--------------------*/
 		request.getRequestDispatcher("hostel_footer.html").include(request, response);
 	}

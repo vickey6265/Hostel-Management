@@ -2,6 +2,8 @@
 <html>
 <head>
 <link rel="stylesheet" href="index_css.css"></link>
+<link rel="stylesheet" href="index_validation_css.css"></link>
+<script type="text/javascript" src="validation.js"></script>
 <meta charset="ISO-8859-1">
 <title>Contact Us - hostel.com</title>
 </head>
@@ -22,18 +24,15 @@
 		<div>
 			<p id="link_login_cu">Contact Us</p>
 		</div>
-		<form id="form_cus" action="" method="">
+		<form id="form_cus" action="" method="get" onsubmit="return contactUs(this)">
 			<table>
 				<tr>
-					<td><img src="icons/icons/cu_email.png" id="cus_icon" /><input
-						type="text" name="rector_un" placeholder="Email ID" /></td>
+					<td><img src="icons/icons/cu_email.png" id="cus_icon" /><input id="contactus_un"
+						type="text" name="contactus_un" placeholder="Email ID" /></td>
 				</tr>
 				<tr>
-					<td><img src="icons/icons/cu_write_us.png" id="cus_icon" /><input
-						type="text" name="rector_pw" placeholder="Write us Here" /></td>
-				</tr>
-				<tr>
-					<td><p>Validation Here</p></td>
+					<td><img src="icons/icons/cu_write_us.png" id="cus_icon" /><input id="contactus_msg"
+						type="text" name="contactus_msg" placeholder="Write us Here" /></td>
 				</tr>
 				<tr>
 					<td><button id="login_rec_cus" type="submit" name="student_submit"

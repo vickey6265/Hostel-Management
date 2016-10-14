@@ -1,0 +1,22 @@
+@CHARSET "ISO-8859-1";
+
+/*------------------ Index , contact us, forget password Registration validation ---------------------*/
+#msg {
+	display: none;
+	position: absolute;
+	z-index: 200;
+	background-color: #414141;
+	color: white;
+	padding-left: 7px;
+}
+
+#msgcontent {
+	font-family: sans-serif;
+	display: block;
+	background:;
+	border: 1px solid white;
+	border-left: none;
+	padding: 5px;
+	min-width: 150px;
+	max-width: 250px;
+}

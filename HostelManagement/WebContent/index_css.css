@@ -122,7 +122,7 @@
 
 #form_rec table {
 	margin-left: 20px;
-	margin-top: 15px;
+	margin-top: 18px;
 }
 
 #login_rec {
@@ -206,7 +206,7 @@
 
 #form_stu table {
 	margin-left: 20px;
-	margin-top: 15px;
+	margin-top: 18px;
 }
 /*---------- Hostel Images -----------*/
 #hostel_image {
@@ -381,13 +381,13 @@
 
 #form_stu_registration table {
 	margin-top: 15px;
-	width: 500px;
+	
 	padding-left: -10px;
-	padding-right: 170px;
+	padding-right: 30px;
 	height: 480px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	margin-left: 32%;
+	margin-left: 37%;
 	border-radius: 5px;
 	background-color: #008c46;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
@@ -416,8 +416,15 @@
 	float: left;
 }
 
-#reset_pw p {
+#reset_pw_link  {
+	margin-left: 41.5%;
+	border-radius: 5px;
 	padding-top: 10px;
+	height: 40px;
+	width: 200px;
+	text-align: center;
+	background-color: #414141;
+	margin-top: 10px;
 	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 25px;
@@ -425,8 +432,8 @@
 }
 
 #form_rp {
-	padding-top: 20px;
-	height: 250px;
+	padding-top: 10px;
+	height: 230px;
 	width: 40%;
 	margin-left: 30%;
 	background-color: #414141;
@@ -455,7 +462,7 @@
 	margin-left: 60px;
 	width: 30px;
 	padding-right: 20px;
-	padding-top: 20px;
+	padding-top: 60px;
 }
 
 #login_rec_cus {
@@ -793,7 +800,7 @@
 	color: white;
 }
 
-/*------------------ validation ---------------------*/
+/*------------------ Rector Registration validation ---------------------*/
 
 #msg {
   display: none;

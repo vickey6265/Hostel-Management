@@ -2,6 +2,8 @@
 <html>
 <head>
 <link rel="stylesheet" href="index_css.css"></link>
+<link rel="stylesheet" href="student_validation_css.css"></link>
+<script type="text/javascript" src="validation.js"></script>
 <meta charset="ISO-8859-1">
 <title>Student Registration</title>
 </head>
@@ -13,7 +15,7 @@
 		<p id="main_line">Welcome to Hoste!</p>
 	</div>
 
-	<form id="form_stu_registration" action="addstudent_lite" method="get">
+	<form id="form_stu_registration" action="addstudent_lite" method="get" onsubmit="return studentRegistration(this)">
 		<p id="stu_title_regi">Student Registration Form</p>
 		<table>
 			<tr>
@@ -30,7 +32,7 @@
 			</tr>
 			<tr>
 				<td><img src="icons/icons/birthday.png" id="stu_icon" /><input
-					id="stu_dog" type="text" name="student_dob"
+					id="stu_dob" type="text" name="student_dob"
 					placeholder="Birthdate (dd-mon-yyyy)" /></td>
 				<td><p id="stu_dob_valid"></p></td>
 			</tr>
