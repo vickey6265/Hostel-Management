@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.rahulvivek.hostel.db.Student;
+import com.rahulvivek.hostel.db.StudentData;
 
 
 @WebServlet("/info_student")
@@ -18,7 +19,7 @@ public class StudentInfo extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Student si = new Student(Integer.parseInt(request.getParameter("sid")));
+		Student si = StudentData.getStudent(Integer.parseInt(request.getParameter("sid")));
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
 		

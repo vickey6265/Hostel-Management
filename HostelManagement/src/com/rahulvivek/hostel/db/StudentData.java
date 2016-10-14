@@ -169,7 +169,7 @@ public class StudentData {
 			while (rs.next()) {
 				sid = rs.getInt("sid");
 			}
-			
+			sid++;
 			PreparedStatement ps=con.prepareStatement(sqlqry);
 			ps.setInt(1, sid);
 			ps.setString(2, name);
