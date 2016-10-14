@@ -586,20 +586,42 @@
 
 /*-------------- Hostel View  ----------------*/
 #hostel_view {
-	height: 200px;
+	
+	height: 250px;
 	width: 100%;
 	background-image: linear-gradient(to left, #0080c0, #008c46);
 }
 
-#hostel_view img {
-	height: 90px;
-	width: 90px;
-	padding-top: 5px;
+#hostel_view p {
+	height: 85px;
+	width: 85px;
+	font-family: sans-serif;
+	float:left;
+	padding-top: 10px;
 	margin-top: 10px;
-	border-radius: 15px;
+	color: white;
+	font-size: 15px;
+	font-weight:bold;
+	text-align: center;
+	border-radius: 10px;
 	margin-left: 15px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
+	background-color: black;
+	box-shadow: 2px 6px 6px 2px white, 0 6px 20px 0
+		rgba(0, 0, 0, 0.50);
+}
+
+#hostel_view a {
+	
+	font-family: sans-serif;
+	float:left;
+	margin-left: 17px;
+	margin-top: 40px;
+	color: white;
+	font-size: 15px;
+	font-weight:bold;
+	text-align: center;
+	border-radius: 10px;
+	background-color: black;
 }
 
 #hostel_view_info {
@@ -643,6 +665,7 @@
 	text-align: left;
 	background-image: linear-gradient(to left, #0080c0, #008c46);
 }
+
 
 /*-------------- copyright ----------------*/
 #copyright_content {
