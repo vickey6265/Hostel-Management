@@ -17,8 +17,8 @@ public class RectorInfo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Rector ri = new Rector();
-		Student si = new Student();
+		Rector ri = new Rector(Integer.parseInt(request.getParameter("rid")));
+		Student si = new Student(Integer.parseInt(request.getParameter("sid")));
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
 		

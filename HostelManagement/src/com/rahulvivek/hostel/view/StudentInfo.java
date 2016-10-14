@@ -18,7 +18,7 @@ public class StudentInfo extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Student si = new Student();
+		Student si = new Student(Integer.parseInt(request.getParameter("sid")));
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
 		

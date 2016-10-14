@@ -119,27 +119,32 @@ public class StudentData {
 	
 		int status=0;
 		
-		
-		String sqlqry="insert into student() values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sqlqry="insert into student_info(sid,name,age,dob,doj,address,college,mobile_num,email,password,photo,dol,rid,roomno,fees,stu_access) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		try {
 			Connection con=Connector.getConnection();
+			Statement stm = con.createStatement();
+			ResultSet rs = stm.executeQuery("select Max(sid) sid from student_info");
+			while (rs.next()) {
+				sid = rs.getInt("sid");
+			}
 			
 			PreparedStatement ps=con.prepareStatement(sqlqry);
 			ps.setInt(1, sid);
 			ps.setString(2, name);
 			ps.setInt(3, age);
 			ps.setDate(4, dob);
-			ps.setString(5, collage);
+			ps.setDate(5, dateOfJoin);
 			ps.setString(6, address);
-			ps.setLong(7, phoneNo);
-			ps.setString(8, email);
-			ps.setString(9, password);
-			ps.setDate(10, dateOfJoin);
-			ps.setDate(11, dateOfLeave);
-			ps.setString(12, photo);
+			ps.setString(7, collage);
+			ps.setLong(8, phoneNo);
+			ps.setString(9, email);
+			ps.setString(10, password);
+			ps.setString(11, photo);
+			ps.setDate(12, dateOfLeave);
 			ps.setInt(13, rid);
 			ps.setInt(14, roomNo);
 			ps.setDouble(15, fees);
+			ps.setString(16, "y");
 			
 			status=ps.executeUpdate();
 		} catch (ClassNotFoundException | IOException | SQLException e) {
@@ -159,6 +164,11 @@ public class StudentData {
 		String sqlqry="insert into student_lite(sid,name,age,dob,doj,address,college,mobile_num,email,password,photo,stu_access) values(?,?,?,?,?,?,?,?,?,?,?,?)";
 		try {
 			Connection con=Connector.getConnection();
+			Statement stm = con.createStatement();
+			ResultSet rs = stm.executeQuery("select Max(sid) sid from student_lite");
+			while (rs.next()) {
+				sid = rs.getInt("sid");
+			}
 			
 			PreparedStatement ps=con.prepareStatement(sqlqry);
 			ps.setInt(1, sid);

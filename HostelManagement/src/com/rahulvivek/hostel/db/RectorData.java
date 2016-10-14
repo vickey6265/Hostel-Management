@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.sql.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -43,16 +42,20 @@ public class RectorData {
 		}
 		return null;
 	}
-	
+
 	public static int saveRector(int rid, String name, String dob, String address, long phoneNo, String email,
 			String password, String dateOfJoin, String photo) {
-		int status=0;
-		
-		String sqlqry="insert into rector(rid,name,dob,collage,address,phoneno,email,password,dojoin,dol,photo) values(?,?,?,?,?,?,?,?,?,?,?)";
+		int status = 0;
+
+		String sqlqry = "insert into rector(rid,name,dob,collage,address,phoneno,email,password,dojoin,dol,photo) values(?,?,?,?,?,?,?,?,?,?,?)";
 		try {
-			Connection con=Connector.getConnection();
-			
-			PreparedStatement ps=con.prepareStatement(sqlqry);
+			Connection con = Connector.getConnection();
+			Statement stm = con.createStatement();
+			ResultSet rs = stm.executeQuery("select Max(rid) rid from rector");
+			while (rs.next()) {
+				rid = rs.getInt("rid");
+			}
+			PreparedStatement ps = con.prepareStatement(sqlqry);
 			ps.setInt(1, rid);
 			ps.setString(2, name);
 			ps.setString(3, dob);
@@ -64,14 +67,12 @@ public class RectorData {
 			ps.setString(9, dateOfJoin);
 			ps.setString(10, "");
 			ps.setString(11, photo);
-			
-			
-			status=ps.executeUpdate();
+
+			status = ps.executeUpdate();
 		} catch (ClassNotFoundException | IOException | SQLException e) {
 			e.printStackTrace();
 		}
-		
-		
+
 		return status;
 	}
 

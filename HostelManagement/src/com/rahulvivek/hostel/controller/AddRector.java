@@ -14,27 +14,25 @@ import com.rahulvivek.hostel.db.RectorData;
 public class AddRector extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	static int rid=1000;
+	static int rid=10;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		System.out.println("start");
 		String name=request.getParameter("rector_name");
 		String dob=(request.getParameter("rector_dob"));
-		
 		String address=request.getParameter("rector_add");
 		long mobile=Long.parseLong(request.getParameter("rector_numb"));
 		String email=request.getParameter("rector_email");
 		String password=request.getParameter("rector_pass");
-		
 		String photo=request.getParameter("rector_photo");
 		String dateOfJoin=request.getParameter("doj");
-		rid++;
+		
 		System.out.println(name+" "+dob+" "+address+" "+mobile+" "+email+" "+password+" "+photo+" "+dateOfJoin);
 	
 		int i=RectorData.saveRector(rid, name, dob, address,  mobile, email, password, dateOfJoin, photo);
 	
 		if(i>0) {
-			System.out.println("done");
+			response.sendRedirect("index.html");
 		}
 	}
 
