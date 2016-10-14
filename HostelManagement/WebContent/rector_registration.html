@@ -12,7 +12,7 @@
 		<a style="text-decoration: none" href="index.html"><p id="logo_1">hostel</p><p id="logo_2">.com</p></a><p id="main_line">Welcome to Hoste!</p>
 	</div>
 
-	<form id="form_rec_registration" action="add_rector" method="get" onsubmit="return rector_validation()">
+	<form id="form_rec_registration" method="get" onsubmit="return testRector(this)">
 		<p id="rec_title_regi">Rector Registration Form</p>
 		<table>
 			<tr>
@@ -29,7 +29,7 @@
 			<tr>
 				<td><img src="icons/icons/address.png" id="rec_icon" /><input id="rec_add"
 					type="text" name="rector_add" placeholder="Address" /></td>
-					<td><p id="rec_name_valid"></p></td>
+					<td><p id="rec__valid"></p></td>
 			</tr>
 			<tr>
 				<td><img src="icons/icons/mobile_number.png" id="rec_icon" /><input id="rec_num"
