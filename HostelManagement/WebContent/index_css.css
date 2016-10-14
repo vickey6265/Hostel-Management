@@ -605,7 +605,7 @@
 	text-align: center;
 	border-radius: 10px;
 	margin-left: 15px;
-	background-color: black;
+	background-color: #3b3b3b;
 	box-shadow: 2px 6px 6px 2px white, 0 6px 20px 0
 		rgba(0, 0, 0, 0.50);
 }
@@ -621,7 +621,7 @@
 	font-weight:bold;
 	text-align: center;
 	border-radius: 10px;
-	background-color: black;
+	background-color: #3b3b3b;
 }
 
 #hostel_view_info {

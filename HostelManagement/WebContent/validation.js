@@ -1,4 +1,4 @@
-function formValidation() {
+function rector_validation() {
 	var name=document.getElementById("rec_name");
 	var phone=document.getElementById("rec_num");
 	var email=document.getElementById("rec_email");
@@ -38,6 +38,10 @@ function formValidation() {
 	return gob;
 
 }
+function  allalphabate(allalp){
+	var letters = /^[a-zA-Z]+$/;
+}
+
 
 function allnumeric(fname) {
 	var numbers = /^[0-9]+$/;
