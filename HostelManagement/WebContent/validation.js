@@ -1,22 +1,38 @@
 function formValidation() {
 	var name=document.getElementById("rec_name");
 	var phone=document.getElementById("rec_num");
-	var mobile=document.getElementById("rec_email");
-	var showfname=document.registration.showfname;
+	var email=document.getElementById("rec_email");
+	var address=document.getElementById("rec_add");
+	var pass=document.getElementById("rec_pass");
+	var cpass=document.getElementById("rec_cpass");
+	
+	var showname=document.getElementById("rec_name_valid");
 	var showlname=document.registration.showlname;
 	var showmobile=document.registration.showmobile;
 	
 	var gob=false;
-		if (allnumeric(fname)) {
+		if (allalpha(name)) {
 			
-				if (alphanumeric(lname)) {
+				if (alphanumeric(address)) {
 					
-					if(allnumericm(mobile)){
-						gob=true;
+					if(allnumericm(phone)){
+						if(isEmail(email)){
+							if(alphanumspecial(pass)){
+								if(alphanumspecial(cpass)){
+									got=true;
+								}
+							}
+							
+						}
+						
 						
 					}
 				}
 			
+		}else{
+			showname.innerHTML="Name must be Alphabatic value ";
+			name.focus();
+			gob=false;
 		}
 	
 	return gob;
@@ -95,4 +111,40 @@ function alphanumeric(lname) {
 	}
 	
 	return flag;
+}
+
+
+function allnumeric(fname) {
+	var numbers = /^[0-9]+$/;
+	
+	if(fname.match(numbers))
+		return true;
+	else
+		return false;	
+}
+
+function allalpha(alpha){
+	var letters = /^[a-zA-Z]+$/;
+	if(alpha.match(letters))
+		return true;
+	else
+		return false;	
+}
+
+function alphanumeric(name) {
+	var letters = /^[0-9a-zA-Z]+$/;
+	if(name.match(letters))
+		return true;
+	else
+		return false;	
+	
+}
+
+function alphanumspecial(pass) {
+	var letters = /^[0-9a-zA-Z@#$%&*()]+$/;
+	if(pass.match(letters))
+		return true;
+	else
+		return false;	
+	
 }
