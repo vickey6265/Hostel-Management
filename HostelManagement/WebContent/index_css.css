@@ -78,8 +78,10 @@
 
 /*-----------Rector Division------------*/
 #rector {
+	margin-top: 80px;
+	position:relative;
 	text-align: center;
-	height: 350px;
+	height: 375px;
 	width: 50%;
 	background-image: linear-gradient(to left, #0080c0, #008c46);
 	float: left;
@@ -101,12 +103,13 @@
 
 #form_rec {
 	margin-bottom: 10px;
+	border-radius: 5px;
 	padding-top: 5px;
+	margin-left: 28%;
 	height: 200px;
 	width: 300px;
-	margin-left: 28%;
 	background-color: #414141;
-	border-radius: 5px;
+	opacity: 80;
 	margin-top: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
 		rgba(0, 0, 0, 0.30);
@@ -147,11 +150,13 @@
 
 /*-----------Student Division------------*/
 #student {
+	margin-top: 80px;
+	position:relative;
 	text-align: center;
-	height: 350px;
+	height: 375px;
 	width: 50%;
+	background-image: linear-gradient(to left, #008c46,#0080c0);
 	float: left;
-	background-image: linear-gradient(to left, #008c46, #0080c0);
 }
 
 #form_stu {
@@ -298,9 +303,11 @@
 }
 
 #title_rec {
+	position:fixed;
+	z-index: 100;
 	background-color: black;
-	height: 100px;
-	wdth: 100%;
+	height: 80px;
+	width: 100%;
 }
 
 #register_rec {
@@ -319,7 +326,7 @@
 	text-align: center;
 	height: 450px;
 	width: 100%;
-	padding-top: 20px;
+	padding-top: 90px;
 	padding-bottom: 10px;
 	background-color: #0078b3;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
@@ -339,7 +346,7 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
 		rgba(0, 0, 0, 0.30);
 	border-radius: 5px;
-	margin-left: 40%;
+	margin-left: 38%;
 	padding-bottom: 10px;
 	padding-top: 10px;
 	padding-left: 10px;
@@ -350,6 +357,7 @@
 
 /*-----------Student Registration-----------*/
 #stu_title_regi {
+	padding-top:5px;
 	font-family: sans-serif;
 	font-size: 30px;
 	color: white;
@@ -373,7 +381,7 @@
 #form_stu_registration {
 	text-align: center;
 	height: 550px;
-	padding-top: 10px;
+	padding-top: 80px;
 	padding-left: 20px;
 	/*background-color: #008c46;*/
 	background-image: linear-gradient(to left, #008c46, #0080c0);
@@ -403,12 +411,15 @@
 }
 
 #title_stu {
+	position:fixed;
+	width:100%;
 	background-color: #232323;
-	height: 100px;
+	height: 80px;
 }
 
 /*-------------- Forget Password ----------------*/
 #reset_pw {
+	margin-top: 80px;
 	text-align: center;
 	height: 350px;
 	width: 100%;
@@ -454,7 +465,7 @@
 	border-radius: 5px;
 	height: 30px;
 	width: 250px;
-	margin-top: 10px;
+
 }
 
 #cus_icon {
@@ -462,7 +473,7 @@
 	margin-left: 60px;
 	width: 30px;
 	padding-right: 20px;
-	padding-top: 60px;
+	padding-top: 5px;
 }
 
 #login_rec_cus {
@@ -480,7 +491,8 @@
 
 /*-------------- About us ----------------*/
 #about_us {
-	height: 600px;
+	padding-top:80px;
+	height: 500px;
 	width: 100%;
 	background-image: linear-gradient(to left, #0080c0, #008c46);
 }
@@ -522,6 +534,7 @@
 
 /*-------------- Contact us ----------------*/
 #rector_cus {
+	margin-top:80px;
 	text-align: center;
 	height: 350px;
 	width: 100%;
@@ -542,10 +555,11 @@
 	text-decoration: none;
 	font-size: 25px;
 	color: white;
+	z-index: 100;
 }
 
 #form_cus {
-	padding-top: 20px;
+	padding-top: 15px;
 	height: 200px;
 	width: 40%;
 	margin-left: 30%;
@@ -558,6 +572,7 @@
 }
 
 #form_cus table {
+	z-index:100;
 	margin-left: 50px;
 }
 
@@ -570,12 +585,30 @@
 	margin-top: 10px;
 }
 
-#cus_icon {
+#cus_icon_un {
 	height: 27px;
 	margin-left: 60px;
 	width: 27px;
 	padding-right: 20px;
-	padding-top: 10px;
+	padding-bottom: -20px;
+}
+
+#cus_icon_ta {
+	height: 27px;
+	margin-left: 60px;
+	width: 27px;
+	padding-right: 20px;
+	padding-bottom: 22px; 
+}
+
+#contactus_msg{
+	margin-left: 10px;
+	font-family: sans-serif;
+	border-radius: 5px;
+	height: 60px;
+	width: 250px;
+	margin-top: 10px;
+	resize: none;
 }
 
 #login_rec_cus {

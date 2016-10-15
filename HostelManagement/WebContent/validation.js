@@ -1,202 +1,83 @@
-function rector_validation() {
-	var name = document.getElementById("rec_name");
-	var phone = document.getElementById("rec_num");
-	var email = document.getElementById("rec_email");
-	var address = document.getElementById("rec_add");
-	var pass = document.getElementById("rec_pass");
-	var cpass = document.getElementById("rec_cpass");
-
-	var showname = document.getElementById("rec_name_valid");
-	var showaddress = document.getElementById("rec_address_valid");
-	var showphone = document.getElementById("rec_cnum_valid");
-	var showemail = document.getElementById("rec_email_valid");
-	var showpass = document.getElementById("rec_pass_valid");
-	var showcpass = document.getElementById("rec_cpass_valid");
-
-	var gob = false;
-	if (allalpha(name)) {
-		if (alphanumeric(address)) {
-			if (isMobile(phone)) {
-				if (isEmail(email)) {
-					if (alphanumspecial(pass)) {
-						if (alphanumspecial(cpass)) {
-							if (isSame(pass, cpass)) {
-								got = true;
-							}
-						} else {
-							showcpass.innerHTML = "Enter confirm password ";
-							cpass.focus();
-							gob = false;
-						}
-					} else {
-						showpass.innerHTML = "Enter Password Here ";
-						pass.focus();
-						gob = false;
-					}
-
-				} else {
-					showemail.innerHTML = "Enter correct email ";
-					email.focus();
-					gob = false;
-				}
-
-			} else {
-				showphone.innerHTML = "Mobile Number must be numbers only ";
-				phone.focus();
-				gob = false;
-			}
-		} else {
-			showaddress.innerHTML = "Write Proper Address ";
-			address.focus();
-			gob = false;
-		}
-	} else {
-		showname.innerHTML = "Name must be Alphabatic value ";
-		name.focus();
-		gob = false;
-	}
-
-	return gob;
-
-}
-function allalphabate(allalp) {
-	var letters = /^[a-zA-Z]+$/;
-}
-
-function allnumeric(fname) {
-	var numbers = /^[0-9]+$/;
-	var flag = false;
-	if (fname.value.length == 10) {
-		flag = true;
-		showfname.innerHTML = " ";
-		if (fname.value.match(numbers)) {
-			flag = true;
-			showfname.innerHTML = " ";
-		} else {
-			showfname.innerHTML = "first Name must have numeric value ";
-			fname.focus();
-			flag = false;
-		}
-	} else {
-		showfname.innerHTML = "first Name must have 10 numeric value ";
-		fname.focus();
-		flag = false;
-	}
-
-	return flag;
-}
-function allnumericm(mobile) {
-	var numbers = /^[0-9]+$/;
-	var flag = false;
-	if (mobile.value.length == 10) {
-		flag = true;
-		showmobile.innerHTML = " ";
-
-		if (mobile.value.match(numbers)) {
-			flag = true;
-			showmobile.innerHTML = " ";
-		} else {
-			// alert('Mobile No must have numeric characters only');
-			showmobile.innerHTML = "Mobile No. must have numeric value ";
-			mobile.focus();
-			flag = false;
-		}
-	} else {
-		// alert('Mobile No must have 10 numeric characters only');
-		showmobile.innerHTML = "Mobile No. must have 10 numeric value ";
-		mobile.focus();
-		flag = false;
-	}
-
-	return flag;
-}
-
-function alphanumeric(lname) {
-	var letters = /^[0-9a-zA-Z]+$/;
-	var flag = false;
-	if (lname.value.length == 12) {
-		flag = true;
-		showlname.innerHTML = " ";
-
-		if (lname.value.match(letters)) {
-			flag = true;
-			showlname.innerHTML = " ";
-		} else {
-			// alert('Last Name must have alphanumeric characters only');
-			showlname.innerHTML = "Last Name must have alphanumeric characters only ";
-			lname.focus();
-			flag = false;
-		}
-	} else {
-		// alert('Last Name must have 12 alphanumeric characters only');
-		showlname.innerHTML = "Last Name must have 12 alphanumeric characters only ";
-		lname.focus();
-		flag = false;
-	}
-
-	return flag;
-}
-
-function allnumeric(fname) {
-	var numbers = /^[0-9]+$/;
-
-	if (fname.match(numbers))
-		return true;
-	else
-		return false;
-}
-
-function allalpha(alpha) {
-	var letters = /^[a-zA-Z]+$/;
-	if (alpha.match(letters))
-		return true;
-	else
-		return false;
-}
-
-function alphanumeric(name) {
-	var letters = /^[0-9a-zA-Z]+$/;
-	if (name.match(letters))
-		return true;
-	else
-		return false;
-
-}
-
-function alphanumspecial(pass) {
-	var letters = /^[0-9a-zA-Z!^@#$%&*()]+$/;
-	if (pass.match(letters))
-		return true;
-	else
-		return false;
-
-}
-
-function isSame(pass, cpass) {
-	if (pass.equals(cpass)) {
-		return true;
-	} else {
-		return false;
-	}
-
-}
-
-function isMobile(phone) {
-	var numbers = /^[0-9]+$/;
-	if (phone.length == 10) {
-		if (fname.match(numbers)) {
-			return true;
-		} else {
-			return false;
-		}
-	} else {
-		return false;
-	}
-}
 
 /*------------ Rector Registration Validation ----------------*/
+
+function isDate(dateVal) {
+    
+	var currVal=document.getElementById(dateVal).value;
+	if (currVal == '')
+    	return false;
+
+    //Declare Regex  
+    var rxDatePattern = /^(\d{1,2})(\/|-)([a-zA-Z]{3})(\/|-)(\d{4})$/;
+    var dtArray = currVal.match(rxDatePattern); // is format OK?
+
+    if (dtArray == null) 
+    	return false;
+    var dtDay = parseInt(dtArray[1]);
+    var dtMonth = dtArray[3];
+    var dtYear = parseInt(dtArray[4]);
+
+    // need to change to lowerCase because switch is
+    // case sensitive
+    switch (dtMonth.toLowerCase()) {
+        case 'jan':
+            dtMonth = '01';
+            break;
+        case 'feb':
+            dtMonth = '02';
+            break;
+        case 'mar':
+            dtMonth = '03';
+            break;
+        case 'apr':
+            dtMonth = '04';
+            break;
+        case 'may':
+            dtMonth = '05';
+            break;
+        case 'jun':
+            dtMonth = '06';
+            break;
+        case 'jul':
+            dtMonth = '07';
+            break;
+        case 'aug':
+            dtMonth = '08';
+            break;
+        case 'sep':
+            dtMonth = '09';
+            break;
+        case 'oct':
+            dtMonth = '10';
+            break;
+        case 'nov':
+            dtMonth = '11';
+            break;
+        case 'dec':
+            dtMonth = '12';
+            break;
+    }
+
+    // convert date to number
+    dtMonth = parseInt(dtMonth);
+
+    if (isNaN(dtMonth)) return false;
+    else if (dtMonth < 1 || dtMonth > 12) return false;
+    else if (dtDay < 1 || dtDay > 31) return false;
+    else if ((dtMonth == 4 || dtMonth == 6 || dtMonth == 9 || dtMonth == 11) && dtDay == 31) return false;
+    else if (dtMonth == 2) {
+        var isleap = (dtYear % 4 == 0 || (dtYear % 100 != 0 || dtYear % 400 == 0));
+        if (dtDay > 29 || (dtDay == 29 && !isleap)) return false;
+    }
+
+    var myDate = new Date(currVal);
+    var today = new Date();
+    if(myDate>today)
+    	return false;
+    return true;
+}
+
 function rectorRegistration(form_rec_registration) {
-	
 	var name = form_rec_registration.rec_name.value;
 	var email = form_rec_registration.rec_email.value;
 	var dob = form_rec_registration.rec_dob.value;
@@ -212,8 +93,8 @@ function rectorRegistration(form_rec_registration) {
 			/<\/?\w+((\s+\w+(\s*=\s*(?:".*?"|'.*?'|[^'">\s]+))?)+\s*|\s*)\/?>/gim);
 	var phoneRegex = /^[0-9]+$/;
 	var passwordRegex = /^[0-9a-zA-Z!^@#$%&*()]+$/;
-
-	/*------- Name ----------*/
+	
+	/*--------------------- Name -----------------------*/
 	if (name == "") {
 		inlineMsg('rec_name', 'You must enter name.', 4);
 		return false;
@@ -223,23 +104,27 @@ function rectorRegistration(form_rec_registration) {
 		return false;
 	}
 
-	/*------- DOB ----------*/
+	/*--------------------- DOB -----------------------------*/
 	if (dob == "") {
 		inlineMsg('rec_dob', 'You must enter Birthdate.', 4);
 		return false;
 	}
+	if (!isDate('rec_dob')) {
+		inlineMsg('rec_dob', 'Please enter Valid date.', 4);
+		return false;
+	}
 
-	/*------- Address ----------*/
+	/*----------------------- Address ----------------------*/
 	if (address == "") {
 		inlineMsg('rec_add', 'You must enter Address.', 4);
 		return false;
 	}
-	if (address.match(messageRegex)) {
-		inlineMsg('rec_add', 'You have entered an invalid message.',4);
+	if (!address.match(messageRegex)) {
+		inlineMsg('rec_add', 'You have entered an invalid message.', 4);
 		return false;
 	}
 
-	/*------- Contact number ----------*/
+	/*----------------------- Contact number ----------------*/
 
 	if (phone == "") {
 		inlineMsg('rec_num', 'You must enter Contact Number.', 4);
@@ -254,7 +139,7 @@ function rectorRegistration(form_rec_registration) {
 		return false;
 	}
 
-	/*------- Email ----------*/
+	/*---------------------- Email ---------------------------*/
 	if (email == "") {
 		inlineMsg('rec_email', 'You must enter your email.', 4);
 		return false;
@@ -264,7 +149,7 @@ function rectorRegistration(form_rec_registration) {
 		return false;
 	}
 
-	/*------- Password ----------*/
+	/*----------------------- Password ------------------------*/
 	if (password == "") {
 		inlineMsg('rec_pass', 'You must enter Password.', 4);
 		return false;
@@ -297,6 +182,7 @@ function rectorRegistration(form_rec_registration) {
 }
 
 /*------------ Student Registration Validation ----------------*/
+
 function studentRegistration(form_stu_registration) {
 
 	var name = form_stu_registration.stu_name.value;
@@ -312,13 +198,14 @@ function studentRegistration(form_stu_registration) {
 
 	var nameRegex = /^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$/;
 	var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-	/*var messageRegex = new RegExp(
-			/<\/?\w+((\s+\w+(\s*=\s*(?:".*?"|'.*?'|[^'">\s]+))?)+\s*|\s*)\/?>/gim);*/
+	/*
+	 * var messageRegex = new RegExp( /<\/?\w+((\s+\w+(\s*=\s*(?:".*?"|'.*?'|[^'">\s]+))?)+\s*|\s*)\/?>/gim);
+	 */
 	var addressRegx = /^[0-9a-zA-Z@#$&/,()-]+$/;
 	var phoneRegex = /^[0-9]+$/;
 	var passwordRegex = /^[0-9a-zA-Z!^@#$%&*()]+$/;
 
-/*------- Name ----------*/
+	/*----------------------- Name -------------------------*/
 	if (name == "") {
 		inlineMsg('stu_name', 'You must enter name.', 4);
 		return false;
@@ -327,8 +214,8 @@ function studentRegistration(form_stu_registration) {
 		inlineMsg('stu_name', 'You have entered an invalid name.', 4);
 		return false;
 	}
-	
-/*------- Age ----------*/
+
+	/*------------------------ Age ---------------------------*/
 	if (age == "") {
 		inlineMsg('stu_age', 'You must enter Age.', 4);
 		return false;
@@ -341,40 +228,48 @@ function studentRegistration(form_stu_registration) {
 		inlineMsg('stu_age', 'You have entered an invalid age.', 4);
 		return false;
 	}
-	
-/*------- DOB ----------*/
+
+	/*------------------------- DOB ------------------------*/
 	if (dob == "") {
 		inlineMsg('stu_dob', 'You must enter Birthdate.', 4);
 		return false;
 	}
-	
-/*------- DOJ ----------*/
+	if (!isDate('stu_dob')) {
+		inlineMsg('stu_dob', 'Please enter Valid date.', 4);
+		return false;
+	}
+
+	/*------------------------- DOJ --------------------------*/
 	if (doj == "") {
 		inlineMsg('stu_doj', 'You must enter Date Of Joining.', 4);
 		return false;
 	}
+	if (!doj.match(dateRegex)) {
+		inlineMsg('rec_doj', 'Enter date in given formate.', 4);
+		return false;
+	}
 
-/*------- Address ----------*/
+	/*------------------------- Address ------------------------*/
 	if (address == "") {
 		inlineMsg('stu_add', 'You must enter Address.', 4);
 		return false;
 	}
-	if (address.match(addressRegx)) {
-		inlineMsg('stu_add', 'You have entered an invalid message.',4);
+	if (!address.match(addressRegx)) {
+		inlineMsg('stu_add', 'You have entered an invalid message.', 4);
 		return false;
 	}
-	
-/*------- College ----------*/
+
+	/*---------------------------- College ----------------------*/
 	if (college == "") {
 		inlineMsg('stu_colg', 'You must enter College.', 4);
 		return false;
 	}
 	if (college.match(addressRegx)) {
-		inlineMsg('stu_colg', 'You have entered an invalid college name.',4);
+		inlineMsg('stu_colg', 'You have entered an invalid college name.', 4);
 		return false;
 	}
 
-/*------- Contact number ----------*/
+	/*--------------------------- Contact number ----------------------*/
 
 	if (phone == "") {
 		inlineMsg('stu_numb', 'You must enter Contact Number.', 4);
@@ -389,7 +284,7 @@ function studentRegistration(form_stu_registration) {
 		return false;
 	}
 
-/*------- Email ----------*/
+	/*------------------------- Email --------------------------*/
 	if (email == "") {
 		inlineMsg('stu_email', 'You must enter your email.', 4);
 		return false;
@@ -398,8 +293,7 @@ function studentRegistration(form_stu_registration) {
 		inlineMsg('stu_email', 'You have entered an invalid email.', 4);
 		return false;
 	}
-
-/*------- Password ----------*/
+	/*---------------------------- Password ----------*/
 	if (password == "") {
 		inlineMsg('rec_pass', 'You must enter Password.', 4);
 		return false;
@@ -434,14 +328,14 @@ function studentRegistration(form_stu_registration) {
 /*------------------------ Rector (Index) Page Login Validation ---------------*/
 
 function rectorLogin(form_rec) {
-	
+
 	var email = form_rec.rector_un.value;
 	var password = form_rec.rector_pw.value;
 
 	var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 	var passwordRegex = /^[0-9a-zA-Z!^@#$%&*()]+$/;
 
-/*------- Email ----------*/
+	/*------------------------------- Email -----------------------------*/
 	if (email == "") {
 		inlineMsg('rector_un', 'You must enter your email.', 4);
 		return false;
@@ -451,7 +345,7 @@ function rectorLogin(form_rec) {
 		return false;
 	}
 
-/*------- Password ----------*/
+	/*------------------------- Password --------------------------------*/
 	if (password == "") {
 		inlineMsg('rector_pw', 'You must enter Password.', 4);
 		return false;
@@ -467,17 +361,17 @@ function rectorLogin(form_rec) {
 	return true;
 }
 
-/*------------------------ Student (Index) Page Login Validation ---------------*/
+/*--------------------- Student (Index) Page Login Validation ---------------*/
 
 function studentLogin(form_stu) {
-	
+
 	var email = form_stu.student_un.value;
 	var password = form_stu.student_pw.value;
 
 	var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 	var passwordRegex = /^[0-9a-zA-Z!^@#$%&*()]+$/;
 
-/*------- Email ----------*/
+	/*-------------------------- Email --------------------------------*/
 	if (email == "") {
 		inlineMsg('student_un', 'You must enter your email.', 4);
 		return false;
@@ -487,7 +381,7 @@ function studentLogin(form_stu) {
 		return false;
 	}
 
-/*------- Password ----------*/
+	/*------------------------------ Password ------------------------------*/
 	if (password == "") {
 		inlineMsg('student_pw', 'You must enter Password.', 4);
 		return false;
@@ -506,14 +400,14 @@ function studentLogin(form_stu) {
 /*------------------------ Contact Us Page Validation ---------------*/
 
 function contactUs(form_cus) {
-	
+
 	var email = form_cus.contactus_un.value;
 	var message = form_cus.contactus_msg.value;
 
 	var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-	var messageRegx = /^[0-9a-zA-Z@#$&/,()-]+$/;
+	var messageRegx =  new RegExp( /<\/?\w+((\s+\w+(\s*=\s*(?:".*?"|'.*?'|[^'">\s]+))?)+\s*|\s*)\/?>/gim);
 
-/*------- Email ----------*/
+	/*-------------------------------- Email --------------------------------*/
 	if (email == "") {
 		inlineMsg('contactus_un', 'You must enter your email.', 4);
 		return false;
@@ -523,13 +417,13 @@ function contactUs(form_cus) {
 		return false;
 	}
 
-/*------- message ----------*/
+	/*-------------------------- message --------------------------------*/
 	if (message == "") {
 		inlineMsg('contactus_msg', 'You must enter Some Message.', 4);
 		return false;
 	}
 	if (message.match(messageRegx)) {
-		inlineMsg('contactus_msg', 'You have entered an invalid message.',4);
+		inlineMsg('contactus_msg', 'You have entered an invalid message.', 4);
 		return false;
 	}
 	return true;
@@ -538,7 +432,7 @@ function contactUs(form_cus) {
 /*------------------------ Forgot Password Page Validation ---------------*/
 
 function resetPwd(form_rp) {
-	
+
 	var email = form_rp.reset_un.value;
 	var password = form_rp.reset_pwd.value;
 	var cpassword = form_rp.reset_cpwd.value;
@@ -546,7 +440,7 @@ function resetPwd(form_rp) {
 	var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 	var passwordRegex = /^[0-9a-zA-Z!^@#$%&*()]+$/;
 
-/*------- Email ----------*/
+	/*------------------------- Email --------------------------------*/
 	if (email == "") {
 		inlineMsg('reset_un', 'You must enter your email.', 4);
 		return false;
@@ -556,7 +450,7 @@ function resetPwd(form_rp) {
 		return false;
 	}
 
-/*------- Password ----------*/
+	/*------------------------------ Password -------------------------*/
 	if (password == "") {
 		inlineMsg('reset_pwd', 'You must enter Password.', 4);
 		return false;
@@ -588,7 +482,7 @@ function resetPwd(form_rp) {
 	return true;
 }
 
-//START OF MESSAGE SCRIPT //
+// START OF MESSAGE SCRIPT //
 
 var MSGTIMER = 20;
 var MSGSPEED = 5;
@@ -699,8 +593,3 @@ function topPosition(target) {
 	}
 	return top;
 }
-
-
-
-
-
