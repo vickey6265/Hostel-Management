@@ -11,19 +11,20 @@
 	<!-- Header Logo  -->
 
 	<div id="title_rec">
-		<a style="text-decoration: none" href="index.html"><p id="logo_1">hostel</p>
-			<p id="logo_2">.com</p></a>
+		<div id="logo_12">
+			<a style="text-decoration: none" href="index.html"><p id="logo_1">hostel</p>
+				<p id="logo_2">.com</p></a>
+			</div>
 		<p id="main_line">Welcome to Hoste!</p>
 	</div>
 
 	<!--  Rector Login Details here -->
 
 	<div id="rector">
-		<div>
-			<p id="link_login">Rector Login</p>
-		</div>
 		<form id="form_rec" action="rector_login" method="get" onsubmit="return rectorLogin(this)">
 			<table>
+			<p id="link_login">Rector Login</p>
+			<hr id="line"></hr>
 				<tr>
 					<td><img src="icons/icons/cu_email.png" id="email_rec_icon" /><input id="rector_un"
 						type="text" name="rector_un" placeholder="Email ID" /></td>
@@ -38,26 +39,25 @@
 						value="Login" /></td>
 				</tr>
 			</table>
-			<div>
-				<a id="link_fp" href="reset_password.html">Reset Password?</a>
+			<div id="link_fp">
+				<a id="link_fp" href="reset_password.html">Forgot Password?</a>
 			</div>
-
+			<hr id="line_down"></hr>
+			<div id="link">
+				<a  id="link" href="rector_registration.html">Rector Registration</a>
+			</div>
 		</form>
-
-		<div>
-			<a id="link" href="rector_registration.html">Rector Registration</a>
-		</div>
 
 	</div>
 
 	<!--  Student Login Details here -->
 
 	<div id="student">
-		<div>
-			<p id="link_login">Student Login</p>
-		</div>
+			
 		<form id="form_stu" action="student_login" method="get" onsubmit="return studentLogin(this)">
 			<table>
+			<p id="link_login">Student Login</p>
+			<hr id="line"></hr>
 				<tr>
 					<td><img src="icons/icons/cu_email.png" id="email_stu_icon" /><input id="student_un"
 						type="text" name="student_un" placeholder="Email ID" /></td>
@@ -71,18 +71,20 @@
 						value="Login" /></td>
 				</tr>
 			</table>
-			<div>
-				<a id="link_fp" href="reset_password.html">Reset Password?</a>
+			<div id="link_fp">
+				<a id="link_fp" href="reset_password.html">Forgot Password?</a>
 			</div>
-		</form>
-
-		<div>
-			<a id="link" href="student_registration.html">Student
+			<hr id="line_down"></hr>
+			<div id="link">
+				<a id="link" href="student_registration.html">Student
 				Registration</a>
 		</div>
-	</div>
+		</form>
 
-	<!--  Hostel Images Here -->
+		
+	</div>
+	<hr id="line_f"></hr>
+<!--  Hostel Images Here -->
 
 	 <div id="hostel_image">
 		<p>Hostel Images</p>
@@ -97,7 +99,7 @@
 	</div>
 
 	<!--  Rules here -->
-
+<hr id="line_f"></hr>
 	<div id="rr_details">
 		<p id="rr_link_login">Rules and Regulations.</p>
 		<div id="rr_rules">
@@ -153,7 +155,7 @@
 				will be final and binding.</p>
 		</div>
 	</div>
-
+<hr id="line_f"></hr>
 	<!--  footer here -->
 
 	<div id="footer">
