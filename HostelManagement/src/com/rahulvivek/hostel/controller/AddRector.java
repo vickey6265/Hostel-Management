@@ -17,7 +17,7 @@ public class AddRector extends HttpServlet {
 	static int rid=10;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		System.out.println("start");
+		System.out.println("let's start");
 		String name=request.getParameter("rector_name");
 		String dob=(request.getParameter("rector_dob"));
 		String address=request.getParameter("rector_add");
